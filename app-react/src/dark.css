@@ -1,0 +1,144 @@
+body.dark-mode {
+    background: #1d2127;
+    color: #fff;
+}
+
+body.dark-mode code {
+    background: black;
+    color: #fff;
+}
+
+body.dark-mode #sidebar {
+    background: #101418 !important;
+}
+
+body.dark-mode #sidebar .sidebar-header {
+    background: #12171e;
+}
+
+body.dark-mode #sidebar ul li a {
+    background: #12171e;
+}
+
+body.dark-mode .navbar {
+    background: #dad3d3 !important;
+    box-shadow: 1px 3px 0 1px #2f3139;
+}
+
+body.dark-mode .bg-light {
+    background-color: #12171e !important;
+}
+body.dark-mode .table {
+    color: #fff;
+}
+body.dark-mode #sidebar ul li a:hover {
+    background: gray;
+    color: white;
+}
+
+.login-container {
+    background-image: radial-gradient(#444, black);
+}
+
+body.dark-mode input {
+    background: #252b33;
+    color: #fff;
+    border: 1px solid #454444;
+}
+
+body.dark-mode input:focus {
+    background: #494b4e;
+    color: #fff;
+    border: 1px solid #454444;
+}
+
+body.dark-mode textarea {
+    background: #252b33;
+    color: #fff;
+    border: 1px solid #454444;
+}
+
+body.dark-mode textarea:focus {
+    background: #494b4e;
+    color: #fff;
+    border: 1px solid #454444;
+}
+
+body.dark-mode hr {
+    background: #12171e;
+    color: #fff;
+    border: 1px solid #454444;
+}
+
+body.dark-mode .page-link {
+    background: transparent;
+    color: #fff;
+}
+
+body.dark-mode .page-item.disabled .page-link {
+    background: transparent;
+}
+body.dark-mode .list-group-item {
+    background: #12171e;
+    color: #fff;
+    border: 1px solid #0f0f0f;
+}
+
+body.dark-mode .card {
+    background: #12171e;
+}
+
+body.dark-mode form {
+    background: #1c1d20;
+}
+
+body.dark-mode .close {
+    color: #fff;
+}
+
+body.dark-mode .navbar {
+    background: transparent !important;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+body.dark-mode div.modal-footer {
+    border-color: #0f0f0f;
+}
+
+body.dark-mode div.modal-header {
+    border-color: #0f0f0f;
+}
+
+body.dark-mode .btn-flat {
+    color: #e6e6e6;
+}
+
+body.dark-mode #sidebarCollapse {
+    color: gray;
+    background-color: black;
+}
+
+body.dark-mode .btn-outline-dark {
+    color: white;
+    border-color: grey;
+}
+
+body.dark-mode .btn-dark {
+    background-color: white;
+    color: black;
+    border-color: grey;
+}
+
+body.dark-mode .news-footer {
+    opacity: .5;
+    color: white;
+    background-color: black;
+}
+
+body.dark-mode .invalid-form {
+    color: white;
+}

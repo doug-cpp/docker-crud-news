@@ -1,0 +1,6 @@
+export const CREATE_USER = 'CREATE_USER';
+export const DUPLICATE_USER_ERROR = 'DUPLICATE_USER_ERROR';
+export const CREATE_USER_FAIL = 'CREATE_USER_FAIL';
+export const AUTH_USER = 'AUTH_USER';
+export const AUTH_USER_FAIL = 'AUTH_USER_FAIL';
+export const LOGOUT = 'LOGOUT';

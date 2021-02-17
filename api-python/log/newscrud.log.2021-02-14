@@ -1,0 +1,905 @@
+2021-02-14 00:10:59,861 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "sdf@sdf.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'sdf@sdf.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "sdf@sdf.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "sdf@sdf.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'sdf@sdf.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "sdf@sdf.com" }'})
+2021-02-14 00:11:20,820 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "sdf@sdf.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'sdf@sdf.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "sdf@sdf.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "sdf@sdf.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'sdf@sdf.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "sdf@sdf.com" }'})
+2021-02-14 00:27:13,938 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "f24234@fdsad.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'f24234@fdsad.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "f24234@fdsad.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "f24234@fdsad.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'f24234@fdsad.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "f24234@fdsad.com" }'})
+2021-02-14 17:17:14,027 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 378, in save
+    self.validate(clean=clean)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/base/document.py", line 433, in validate
+    raise ValidationError(message, errors=errors)
+mongoengine.errors.ValidationError: ValidationError (UserModel:None) (String value is too short: ['email', 'name'])
+2021-02-14 17:32:51,385 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 378, in save
+    self.validate(clean=clean)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/base/document.py", line 433, in validate
+    raise ValidationError(message, errors=errors)
+mongoengine.errors.ValidationError: ValidationError (UserModel:None) (String value is too short: ['email', 'name'])
+2021-02-14 17:41:03,185 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 378, in save
+    self.validate(clean=clean)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/base/document.py", line 433, in validate
+    raise ValidationError(message, errors=errors)
+mongoengine.errors.ValidationError: ValidationError (UserModel:None) (String value is too short: ['email', 'name'])
+2021-02-14 18:01:22,969 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 18:14:20,730 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 18:27:10,870 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 18:29:23,701 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 18:29:41,186 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "user@mail.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'user@mail.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "user@mail.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "user@mail.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'user@mail.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "user@mail.com" }'})
+2021-02-14 18:30:26,745 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 18:30:33,863 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "user@isso.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'user@isso.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "user@isso.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "user@isso.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'user@isso.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "user@isso.com" }'})
+2021-02-14 19:04:22,913 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 19:10:28,341 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+NoneType: None
+2021-02-14 19:10:30,832 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "teste@isso.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'teste@isso.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "teste@isso.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "teste@isso.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'teste@isso.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "teste@isso.com" }'})
+2021-02-14 19:10:37,920 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "teste@isso.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'teste@isso.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "teste@isso.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "teste@isso.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'teste@isso.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "teste@isso.com" }'})
+2021-02-14 19:11:05,112 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 19:23:56,575 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 19:24:25,472 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "marcos@isso.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'marcos@isso.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "marcos@isso.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "marcos@isso.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'marcos@isso.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "marcos@isso.com" }'})
+2021-02-14 19:34:28,622 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+NoneType: None
+2021-02-14 19:49:01,458 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 19:49:12,409 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "maciuna@isso.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'maciuna@isso.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "maciuna@isso.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "maciuna@isso.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'maciuna@isso.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "maciuna@isso.com" }'})
+2021-02-14 20:15:29,936 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 378, in save
+    self.validate(clean=clean)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/base/document.py", line 433, in validate
+    raise ValidationError(message, errors=errors)
+mongoengine.errors.ValidationError: ValidationError (UserModel:None) (String value is too short: ['name'])
+2021-02-14 20:16:35,010 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 20:16:50,827 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "cad@cad.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'cad@cad.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "cad@cad.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "cad@cad.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'cad@cad.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "cad@cad.com" }'})
+2021-02-14 20:16:53,953 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "cad@cad.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'cad@cad.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "cad@cad.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "cad@cad.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'cad@cad.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "cad@cad.com" }'})
+2021-02-14 20:22:20,605 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 20:22:41,068 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "nome@isso.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'nome@isso.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "nome@isso.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "nome@isso.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'nome@isso.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "nome@isso.com" }'})
+2021-02-14 20:26:27,750 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 20:26:34,934 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "nome@nome.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'nome@nome.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "nome@nome.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "nome@nome.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'nome@nome.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "nome@nome.com" }'})
+2021-02-14 20:34:21,135 ERROR <NEWS_APP_INFO> Algum erro desconhecido aconteceu
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 214, in _get_collection
+    if cls._meta.get("auto_create_index", True) and db.client.is_primary:
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1031, in is_primary
+    return self._server_property('is_writable')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 855, in _server_property
+    server = self._topology.select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [Errno 61] Connection refused, Timeout: 30s, Topology Description: <TopologyDescription id: 6029b3395c2fd7d1e7c8f50a, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [Errno 61] Connection refused')>]>
+2021-02-14 20:34:24,663 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 894, in ensure_indexes
+    collection.create_index(fields, background=background, **opts)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 2059, in create_index
+    return self.__create_indexes([index], session, **cmd_options)[0]
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 1919, in __create_indexes
+    with self._socket_for_writes(session) as sock_info:
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 198, in _socket_for_writes
+    return self.__database.client._socket_for_writes(session)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1293, in _socket_for_writes
+    server = self._select_server(writable_server_selector, session)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1278, in _select_server
+    server = topology.select_server(server_selector)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [Errno 61] Connection refused, Timeout: 30s, Topology Description: <TopologyDescription id: 6029b3395c2fd7d1e7c8f50a, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [Errno 61] Connection refused')>]>
+2021-02-14 20:34:32,727 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 894, in ensure_indexes
+    collection.create_index(fields, background=background, **opts)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 2059, in create_index
+    return self.__create_indexes([index], session, **cmd_options)[0]
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 1919, in __create_indexes
+    with self._socket_for_writes(session) as sock_info:
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 198, in _socket_for_writes
+    return self.__database.client._socket_for_writes(session)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1293, in _socket_for_writes
+    server = self._select_server(writable_server_selector, session)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1278, in _select_server
+    server = topology.select_server(server_selector)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [Errno 61] Connection refused, Timeout: 30s, Topology Description: <TopologyDescription id: 6029b3395c2fd7d1e7c8f50a, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [Errno 61] Connection refused')>]>
+2021-02-14 20:38:07,059 ERROR <NEWS_APP_INFO> Algum erro desconhecido aconteceu
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1207, in next
+    if len(self.__data) or self._refresh():
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1100, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1816, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1766, in __start_session
+    server_session = self._get_server_session()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1802, in _get_server_session
+    return self._topology.get_server_session()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 485, in get_server_session
+    self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [Errno 61] Connection refused, Timeout: 30s, Topology Description: <TopologyDescription id: 6029b3395c2fd7d1e7c8f50a, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [Errno 61] Connection refused')>]>
+2021-02-14 20:38:10,593 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 23, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 894, in ensure_indexes
+    collection.create_index(fields, background=background, **opts)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 2059, in create_index
+    return self.__create_indexes([index], session, **cmd_options)[0]
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 1919, in __create_indexes
+    with self._socket_for_writes(session) as sock_info:
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 198, in _socket_for_writes
+    return self.__database.client._socket_for_writes(session)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1293, in _socket_for_writes
+    server = self._select_server(writable_server_selector, session)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1278, in _select_server
+    server = topology.select_server(server_selector)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:27017: [Errno 61] Connection refused, Timeout: 30s, Topology Description: <TopologyDescription id: 6029b3395c2fd7d1e7c8f50a, topology_type: Single, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [Errno 61] Connection refused')>]>
+2021-02-14 20:40:07,175 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 20:43:57,187 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 20:46:27,364 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 20:56:47,566 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.
+2021-02-14 20:59:10,825 ERROR <NEWS_APP_INFO> Usuário não encontrado ou não autorizado
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/crud-news/api-python/dao/user_dao.py", line 12, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.user_model.DoesNotExist: UserModel matching query does not exist.

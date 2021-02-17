@@ -1,0 +1,361 @@
+2021-02-12 22:53:38,685 ERROR <NEWS_APP_INFO> Erro ao excluir notícia id:60272243595702aad3f272c3
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:53:38,757 ERROR <NEWS_APP_INFO> Trace: NewsModel matching query does not exist.
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:55:12,620 ERROR <NEWS_APP_INFO> Erro ao excluir notícia id:60272243595702aad3f272c3
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:55:12,620 ERROR <NEWS_APP_INFO> Trace: NewsModel matching query does not exist.
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:55:43,788 ERROR <NEWS_APP_INFO> Erro ao excluir notícia id:60272243595702aad3f272c3
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:55:43,788 ERROR <NEWS_APP_INFO> Trace: NewsModel matching query does not exist.
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:56:02,486 ERROR <NEWS_APP_INFO> Erro ao excluir notícia id:60272243595702aad3f272c3
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:56:02,487 ERROR <NEWS_APP_INFO> Trace: NewsModel matching query does not exist.
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:57:50,922 ERROR <NEWS_APP_INFO> 
+******** Erro ao excluir notícia id: 60272243595702aad3f272c3
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:57:50,924 ERROR <NEWS_APP_INFO> Trace: NewsModel matching query does not exist.
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:57:52,064 ERROR <NEWS_APP_INFO> 
+******** Erro ao excluir notícia id: 60272243595702aad3f272c3
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:57:52,065 ERROR <NEWS_APP_INFO> Trace: NewsModel matching query does not exist.
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:57:52,687 ERROR <NEWS_APP_INFO> 
+******** Erro ao excluir notícia id: 60272243595702aad3f272c3
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:57:52,688 ERROR <NEWS_APP_INFO> Trace: NewsModel matching query does not exist.
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:59:02,028 ERROR <NEWS_APP_INFO> ******** Erro ao excluir notícia id: 60272243595702aad3f272c3
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:59:02,030 ERROR <NEWS_APP_INFO> Trace: NewsModel matching query does not exist.
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:59:02,762 ERROR <NEWS_APP_INFO> ******** Erro ao excluir notícia id: 60272243595702aad3f272c3
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 22:59:02,762 ERROR <NEWS_APP_INFO> Trace: NewsModel matching query does not exist.
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 267, in get
+    result = next(queryset)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 1565, in __next__
+    raw_doc = next(self._cursor)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/news_dao.py", line 22, in delete_news
+    NewsModel.objects.get(id=id).delete()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/base.py", line 270, in get
+    raise queryset._document.DoesNotExist(msg)
+model.news_model.DoesNotExist: NewsModel matching query does not exist.
+2021-02-12 23:13:43,052 ERROR <NEWS_APP_INFO> asdfasdf
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "aaa@aaa.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'aaa@aaa.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "aaa@aaa.com" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/dao/user_dao.py", line 25, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "aaa@aaa.com" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'aaa@aaa.com'}, 'errmsg': 'E11000 duplicate key error collection: test.user_model index: email_1 dup key: { email: "aaa@aaa.com" }'})
