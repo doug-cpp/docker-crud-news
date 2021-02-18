@@ -19,18 +19,12 @@ def start_app():
 
     CORS(app)
 
-    # Configura e inicia o banco. Informações no arquivo resources/database.py
     initialize_db(app)
 
-    # Cria a instância de configuração da lib Json Web Token (autenticação)
     jwt = JWTManager(app)
 
-    # Configura a api, enviando um arquivo com classes de erro, definidas
-    # para tratar exceções de forma previsível. Acesse o arquivo de erros em
-    # resources/errors.py
     api = Api(app, errors=errors)
 
-    # Configuração do acesso à API. Veja detalhes no arquivo api/routes.py
     config_routes(api)
 
     return app
@@ -45,10 +39,8 @@ if __name__ == '__main__':
     environment = os.getenv('ENVIRONMENT')
     app = start_app()
 
-    # Quando o sistema estiver em produção, configura as
-    # threads e usa o serve() ao invés de app.run()
     if environment == constants.ENVIRONMENT_PROD:
         threads = os.getenv('THREADS')
-        serve(app, host=host, port=port, threads=threads)
+        serve(app, host='127.0.0.1', port=5000, threads=3)
     else:
         app.run(host=host, port=port, debug=debug)

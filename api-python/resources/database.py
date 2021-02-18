@@ -18,4 +18,13 @@ def initialize_db(app):
                               + os.getenv('DB_HOST') \
                               + '/' + os.getenv('DB_NAME') \
                               + ':' + os.getenv('DB_PORT')
+
+    # app.config['MONGODB_SETTINGS'] = {
+    #     'host': os.getenv['DB_HOST'],
+    #     'username': os.getenv['DB_USERNAME'],
+    #     'password': os.getenv['DB_PASSWORD'],
+    #     'db': 'webapp'
+    # }
+
+
     db.init_app(app)
