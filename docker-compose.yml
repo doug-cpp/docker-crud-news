@@ -17,7 +17,7 @@ services:
 
     mongodb:
         image: mongo
-        container_name: mongo
+        container_name: mongocrudcontainer
         restart: unless-stopped
         command: mongod --auth
         environment:
@@ -34,7 +34,8 @@ services:
         build: 
             context: ./api-python
             dockerfile: Dockerfile
-        command: gunicorn --bind 0.0.0.0:5000 app:app
+        command: python app.py runserver 0.0.0.0:5000
+        # command: gunicorn --bind 0.0.0.0:5000 app:app
         ports:
             - "5000:5000"
         environment:
