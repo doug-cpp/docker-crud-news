@@ -8,10 +8,10 @@ Para que seja facilitado o processo, foram usadas tecnologias de container *Dock
 
 Utilize um terminal e vá para a raiz deste projeto, digitando o comando:
 
-    <code>docker-compose -f docker-compose-prod.yml up --build</code>
+    ### `docker-compose -f docker-compose-prod.yml up --build`
 
 Este comando, usará a versão de produção para executar o sistema. Caso deseje executar a versão de desenvolvimento, o simples comando abaixo fará este papel:
 
-    <code>docker-compose up --build</code>
+    ### `docker-compose up --build`
 
 Feito isso, basta acessar o link http://0.0.0.0:3000 e utilizar o aplicativo.
