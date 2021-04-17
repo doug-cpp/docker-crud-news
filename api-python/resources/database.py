@@ -14,17 +14,22 @@ def initialize_db(app):
     app.JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
     app.secret_key = os.getenv('SECRET_KEY')
 
-    app.config['MONGO_URI'] = 'mongodb://' \
-                              + os.getenv('DB_HOST') \
-                              + '/' + os.getenv('DB_NAME') \
-                              + ':' + os.getenv('DB_PORT')
+    # app.config['MONGODB_DB'] = os.getenv('DB_NAME')
+    # app.config['MONGODB_HOST'] = os.getenv('DB_HOST')
+    # app.config['MONGODB_PORT'] = int(os.getenv('DB_PORT'))
 
     # app.config['MONGODB_SETTINGS'] = {
-    #     'host': os.getenv['DB_HOST'],
-    #     'username': os.getenv['DB_USERNAME'],
-    #     'password': os.getenv['DB_PASSWORD'],
-    #     'db': 'webapp'
+    #     'host': os.environ['DB_HOST'],
+    #     'db': os.environ['DB_NAME']
     # }
 
+    # client = MongoClient(os.environ['MONGODB_HOST'])
+
+    app.config['MONGODB_SETTINGS'] = {
+        'host': os.environ['MONGODB_HOST'],
+        'username': os.environ['MONGODB_USERNAME'],
+        'password': os.environ['MONGODB_PASSWORD'],
+        'db': os.environ['MONGODB_NAME']
+    }
 
     db.init_app(app)

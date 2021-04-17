@@ -1,0 +1,1354 @@
+2021-02-18 21:52:27,811 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'oooaa@acom.br', 'password': '$2b$12$1XXLa96AXpYOJtGkk.WVMOe9.9yinifK1DN6GZ5PLX0RtjpkzYWkG', 'name': 'Alessandro'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 775, in _cache_credentials
+    server = self._get_topology().select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: mongodb:27017: [Errno 8] nodename nor servname provided, or not known, Timeout: 30s, Topology Description: <TopologyDescription id: 602f0a7f566179e52c54aa3a, topology_type: Single, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 8] nodename nor servname provided, or not known')>]>
+2021-02-18 21:52:28,014 ERROR <NEWS_APP_INFO> Trace: mongodb:27017: [Errno 8] nodename nor servname provided, or not known, Timeout: 30s, Topology Description: <TopologyDescription id: 602f0a7f566179e52c54aa3a, topology_type: Single, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 8] nodename nor servname provided, or not known')>]>
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 775, in _cache_credentials
+    server = self._get_topology().select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: mongodb:27017: [Errno 8] nodename nor servname provided, or not known, Timeout: 30s, Topology Description: <TopologyDescription id: 602f0a7f566179e52c54aa3a, topology_type: Single, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 8] nodename nor servname provided, or not known')>]>
+2021-02-18 21:53:11,665 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'oooaa@acom.br', 'password': '$2b$12$9n4I6jB4xdjhrm46AaGf/Oo/BeP0xjruxvnaVzHY2RUtlVQgJLUOq', 'name': 'Alessandro'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 775, in _cache_credentials
+    server = self._get_topology().select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: mongodb:27017: [Errno 8] nodename nor servname provided, or not known, Timeout: 30s, Topology Description: <TopologyDescription id: 602f0a7f566179e52c54aa3a, topology_type: Single, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 8] nodename nor servname provided, or not known')>]>
+2021-02-18 21:53:11,666 ERROR <NEWS_APP_INFO> Trace: mongodb:27017: [Errno 8] nodename nor servname provided, or not known, Timeout: 30s, Topology Description: <TopologyDescription id: 602f0a7f566179e52c54aa3a, topology_type: Single, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 8] nodename nor servname provided, or not known')>]>
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 775, in _cache_credentials
+    server = self._get_topology().select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: mongodb:27017: [Errno 8] nodename nor servname provided, or not known, Timeout: 30s, Topology Description: <TopologyDescription id: 602f0a7f566179e52c54aa3a, topology_type: Single, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 8] nodename nor servname provided, or not known')>]>
+2021-02-18 21:53:36,927 ERROR <NEWS_APP_INFO> ******** Erro ao tentar ler todas as notícias
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/news_dao.py", line 29, in get_all_news
+    return NewsModel.objects.all().to_json()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 775, in _cache_credentials
+    server = self._get_topology().select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: mongodb:27017: [Errno 8] nodename nor servname provided, or not known, Timeout: 30s, Topology Description: <TopologyDescription id: 602f0a7f566179e52c54aa3a, topology_type: Single, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 8] nodename nor servname provided, or not known')>]>
+2021-02-18 21:53:37,083 ERROR <NEWS_APP_INFO> Trace: mongodb:27017: [Errno 8] nodename nor servname provided, or not known, Timeout: 30s, Topology Description: <TopologyDescription id: 602f0a7f566179e52c54aa3a, topology_type: Single, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 8] nodename nor servname provided, or not known')>]>
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/news_dao.py", line 29, in get_all_news
+    return NewsModel.objects.all().to_json()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 775, in _cache_credentials
+    server = self._get_topology().select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: mongodb:27017: [Errno 8] nodename nor servname provided, or not known, Timeout: 30s, Topology Description: <TopologyDescription id: 602f0a7f566179e52c54aa3a, topology_type: Single, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 8] nodename nor servname provided, or not known')>]>
+2021-02-18 21:54:55,640 ERROR <NEWS_APP_INFO> ******** Erro ao tentar ler todas as notícias
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/news_dao.py", line 29, in get_all_news
+    return NewsModel.objects.all().to_json()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:54:55,898 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/news_dao.py", line 29, in get_all_news
+    return NewsModel.objects.all().to_json()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:55:06,371 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'oooaa@acom.br', 'password': '$2b$12$rB0iO342xwxaqQR9L2lbe.WvIjHxbxnOL71uq/hCFMDTNSab6/yf2', 'name': 'Alessandro'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:55:06,403 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:55:09,302 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'oooaa@acom.br', 'password': '$2b$12$4tWDm835T8oZvdkE9pApp.41QXDZ.hy5V3FQ4g3jJsC/F6uU2NZ6u', 'name': 'Alessandro'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:55:09,303 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:55:15,273 ERROR <NEWS_APP_INFO> ******** Erro ao autenticar o usuário: ooo@aaa.com
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 16, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:55:15,278 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 16, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:55:46,509 ERROR <NEWS_APP_INFO> ******** Erro ao criar uma notícia: {'publishingTitle': 'Título da minha nova!', 'publishingContents': 'Parapapapa adf', 'publishingDate': 1613696146000}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/news_dao.py", line 16, in create_news
+    return NewsModel(**req).save().to_json()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:55:46,600 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/news_dao.py", line 16, in create_news
+    return NewsModel(**req).save().to_json()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:56:07,171 ERROR <NEWS_APP_INFO> ******** Erro ao autenticar o usuário: ooo@aaa.com
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 16, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:56:07,172 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 16, in get_user_by_email
+    return UserModel.objects.get(email=email)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:58:48,779 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboa@gamboa.com.br', 'password': '$2b$12$4UXWwizTUsfeQG6zTXBMLu4Ii.sfzHJ131Cp1aiLQkeB1UJz8NR9S', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 21:58:48,779 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:00:21,332 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboa@gamboa.com.br', 'password': '$2b$12$gPXY0fzNEncQqjIU6RjS..c9380Bub7VZZ084dFEbHJ/LiFoy9qD6', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:00:21,340 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:00:23,346 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboa@gamboa.com.br', 'password': '$2b$12$2ELftystb6haSzuxDHqTnuPxoocJO3Ol.8Jn19LVIbsIpQjW2kt7e', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:00:23,347 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:00:55,482 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboa@gamboa.com.br', 'password': '$2b$12$DRFObwXxE8fuuEuLCXtzpe0o.XvtH.7ccO/Xn4enrQjxByvEZuiZG', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboa@gamboa.com.br" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'gamboa@gamboa.com.br'}, 'errmsg': 'E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboa@gamboa.com.br" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboa@gamboa.com.br" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'gamboa@gamboa.com.br'}, 'errmsg': 'E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboa@gamboa.com.br" }'})
+2021-02-18 22:00:55,715 ERROR <NEWS_APP_INFO> Trace: Tried to save duplicate unique keys (E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboa@gamboa.com.br" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'gamboa@gamboa.com.br'}, 'errmsg': 'E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboa@gamboa.com.br" }'})
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboa@gamboa.com.br" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'gamboa@gamboa.com.br'}, 'errmsg': 'E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboa@gamboa.com.br" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboa@gamboa.com.br" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'gamboa@gamboa.com.br'}, 'errmsg': 'E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboa@gamboa.com.br" }'})
+2021-02-18 22:04:30,957 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboa@gamboa.com.br', 'password': '$2b$12$MJe/4WLriajnUhpDv9PzAOLHtO9pCnTTf5bZzjgKPqBMqDHbeL2cO', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:04:31,041 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:14:18,097 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboa@gamboa.com.br', 'password': '$2b$12$v93ZkhaJs9mYK1ukF4T6R.fJTZkxraQnrdq4T01cFXeJ/ZoqUujsK', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:14:18,257 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:15:26,195 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboa@gamboa.com.br', 'password': '$2b$12$KDLHfQlZYJywNru3xkG.YuS3yWUhvY7gYskeUbMSZ1eR3UG2W/Lri', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 215, in _get_collection
+    cls.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 894, in ensure_indexes
+    collection.create_index(fields, background=background, **opts)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 2059, in create_index
+    return self.__create_indexes([index], session, **cmd_options)[0]
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 1949, in __create_indexes
+    self._command(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 238, in _command
+    return sock_info.command(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: not authorized on crudnews to execute command { createIndexes: "user_model", indexes: [ { background: false, unique: true, sparse: false, name: "email_1", key: { email: 1 } } ], lsid: { id: UUID("28a1f629-6a56-4dea-90bd-10a4bb8e18f9") }, $db: "crudnews", $readPreference: { mode: "primary" } }, full error: {'ok': 0.0, 'errmsg': 'not authorized on crudnews to execute command { createIndexes: "user_model", indexes: [ { background: false, unique: true, sparse: false, name: "email_1", key: { email: 1 } } ], lsid: { id: UUID("28a1f629-6a56-4dea-90bd-10a4bb8e18f9") }, $db: "crudnews", $readPreference: { mode: "primary" } }', 'code': 13, 'codeName': 'Unauthorized'}
+2021-02-18 22:15:26,255 ERROR <NEWS_APP_INFO> Trace: not authorized on crudnews to execute command { createIndexes: "user_model", indexes: [ { background: false, unique: true, sparse: false, name: "email_1", key: { email: 1 } } ], lsid: { id: UUID("28a1f629-6a56-4dea-90bd-10a4bb8e18f9") }, $db: "crudnews", $readPreference: { mode: "primary" } }, full error: {'ok': 0.0, 'errmsg': 'not authorized on crudnews to execute command { createIndexes: "user_model", indexes: [ { background: false, unique: true, sparse: false, name: "email_1", key: { email: 1 } } ], lsid: { id: UUID("28a1f629-6a56-4dea-90bd-10a4bb8e18f9") }, $db: "crudnews", $readPreference: { mode: "primary" } }', 'code': 13, 'codeName': 'Unauthorized'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 215, in _get_collection
+    cls.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 894, in ensure_indexes
+    collection.create_index(fields, background=background, **opts)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 2059, in create_index
+    return self.__create_indexes([index], session, **cmd_options)[0]
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 1949, in __create_indexes
+    self._command(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 238, in _command
+    return sock_info.command(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: not authorized on crudnews to execute command { createIndexes: "user_model", indexes: [ { background: false, unique: true, sparse: false, name: "email_1", key: { email: 1 } } ], lsid: { id: UUID("28a1f629-6a56-4dea-90bd-10a4bb8e18f9") }, $db: "crudnews", $readPreference: { mode: "primary" } }, full error: {'ok': 0.0, 'errmsg': 'not authorized on crudnews to execute command { createIndexes: "user_model", indexes: [ { background: false, unique: true, sparse: false, name: "email_1", key: { email: 1 } } ], lsid: { id: UUID("28a1f629-6a56-4dea-90bd-10a4bb8e18f9") }, $db: "crudnews", $readPreference: { mode: "primary" } }', 'code': 13, 'codeName': 'Unauthorized'}
+2021-02-18 22:15:50,584 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboax@gamboa.com.br', 'password': '$2b$12$j62UuuulZeKgvF4uiny4ZOpzsj1yFAeN5w0pYPt0nMyLrs2.TI0ZK', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 894, in ensure_indexes
+    collection.create_index(fields, background=background, **opts)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 2059, in create_index
+    return self.__create_indexes([index], session, **cmd_options)[0]
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 1949, in __create_indexes
+    self._command(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 238, in _command
+    return sock_info.command(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: not authorized on crudnews to execute command { createIndexes: "user_model", indexes: [ { background: false, unique: true, sparse: false, name: "email_1", key: { email: 1 } } ], lsid: { id: UUID("28a1f629-6a56-4dea-90bd-10a4bb8e18f9") }, $db: "crudnews", $readPreference: { mode: "primary" } }, full error: {'ok': 0.0, 'errmsg': 'not authorized on crudnews to execute command { createIndexes: "user_model", indexes: [ { background: false, unique: true, sparse: false, name: "email_1", key: { email: 1 } } ], lsid: { id: UUID("28a1f629-6a56-4dea-90bd-10a4bb8e18f9") }, $db: "crudnews", $readPreference: { mode: "primary" } }', 'code': 13, 'codeName': 'Unauthorized'}
+2021-02-18 22:15:50,585 ERROR <NEWS_APP_INFO> Trace: not authorized on crudnews to execute command { createIndexes: "user_model", indexes: [ { background: false, unique: true, sparse: false, name: "email_1", key: { email: 1 } } ], lsid: { id: UUID("28a1f629-6a56-4dea-90bd-10a4bb8e18f9") }, $db: "crudnews", $readPreference: { mode: "primary" } }, full error: {'ok': 0.0, 'errmsg': 'not authorized on crudnews to execute command { createIndexes: "user_model", indexes: [ { background: false, unique: true, sparse: false, name: "email_1", key: { email: 1 } } ], lsid: { id: UUID("28a1f629-6a56-4dea-90bd-10a4bb8e18f9") }, $db: "crudnews", $readPreference: { mode: "primary" } }', 'code': 13, 'codeName': 'Unauthorized'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 894, in ensure_indexes
+    collection.create_index(fields, background=background, **opts)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 2059, in create_index
+    return self.__create_indexes([index], session, **cmd_options)[0]
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 1949, in __create_indexes
+    self._command(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 238, in _command
+    return sock_info.command(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: not authorized on crudnews to execute command { createIndexes: "user_model", indexes: [ { background: false, unique: true, sparse: false, name: "email_1", key: { email: 1 } } ], lsid: { id: UUID("28a1f629-6a56-4dea-90bd-10a4bb8e18f9") }, $db: "crudnews", $readPreference: { mode: "primary" } }, full error: {'ok': 0.0, 'errmsg': 'not authorized on crudnews to execute command { createIndexes: "user_model", indexes: [ { background: false, unique: true, sparse: false, name: "email_1", key: { email: 1 } } ], lsid: { id: UUID("28a1f629-6a56-4dea-90bd-10a4bb8e18f9") }, $db: "crudnews", $readPreference: { mode: "primary" } }', 'code': 13, 'codeName': 'Unauthorized'}
+2021-02-18 22:17:29,691 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboaxd@gamboa.com.br', 'password': '$2b$12$9Z64P7HYRkMtX/5v6ByW3eBnpqNO0cq/3qYENI7eN6lNAgYmridD2', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:17:29,760 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:18:20,401 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboaxdd@gamboa.com.br', 'password': '$2b$12$uJ3CJhg6DlC/U9OOo2P0Ou0NgLpb2lnrSu/aM7OHGAsgXFttKWSZa', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:18:20,463 ERROR <NEWS_APP_INFO> Trace: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 781, in _cache_credentials
+    sock_info.authenticate(credentials)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 810, in authenticate
+    auth.authenticate(credentials, self)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 673, in authenticate
+    auth_func(credentials, sock_info)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 591, in _authenticate_default
+    return _authenticate_scram(credentials, sock_info, 'SCRAM-SHA-1')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/auth.py", line 295, in _authenticate_scram
+    res = sock_info.command(source, cmd)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/pool.py", line 683, in command
+    return command(self, dbname, spec, slave_ok,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/network.py", line 159, in command
+    helpers._check_command_response(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 164, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2021-02-18 22:22:09,551 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboaxdd@gamboa.com.br', 'password': '$2b$12$sQMY9LBh9szG9N9ArJVkf.PYnCYcxFeDBPPjxNj6mihrbexxA8CI2', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 214, in _get_collection
+    if cls._meta.get("auto_create_index", True) and db.client.is_primary:
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1031, in is_primary
+    return self._server_property('is_writable')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 855, in _server_property
+    server = self._topology.select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: mongodb:27017: [Errno 8] nodename nor servname provided, or not known, Timeout: 30s, Topology Description: <TopologyDescription id: 602f129e683bb40ee9ac005e, topology_type: Single, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 8] nodename nor servname provided, or not known')>]>
+2021-02-18 22:22:09,569 ERROR <NEWS_APP_INFO> Trace: mongodb:27017: [Errno 8] nodename nor servname provided, or not known, Timeout: 30s, Topology Description: <TopologyDescription id: 602f129e683bb40ee9ac005e, topology_type: Single, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 8] nodename nor servname provided, or not known')>]>
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 214, in _get_collection
+    if cls._meta.get("auto_create_index", True) and db.client.is_primary:
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1031, in is_primary
+    return self._server_property('is_writable')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 855, in _server_property
+    server = self._topology.select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: mongodb:27017: [Errno 8] nodename nor servname provided, or not known, Timeout: 30s, Topology Description: <TopologyDescription id: 602f129e683bb40ee9ac005e, topology_type: Single, servers: [<ServerDescription ('mongodb', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('mongodb:27017: [Errno 8] nodename nor servname provided, or not known')>]>
+2021-02-18 23:36:54,620 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboaxdd@gamboa.com.br', 'password': '$2b$12$nYKEHFwP.0zdu1/baUp3lOzKr8EPPEYlUvsfKoFe6/KLVXjpkbQUy', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 775, in _cache_credentials
+    server = self._get_topology().select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 61] Connection refused, Timeout: 30s, Topology Description: <TopologyDescription id: 602f240e03f60cbeb2527985, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [Errno 61] Connection refused')>]>
+2021-02-18 23:36:54,851 ERROR <NEWS_APP_INFO> Trace: 127.0.0.1:27017: [Errno 61] Connection refused, Timeout: 30s, Topology Description: <TopologyDescription id: 602f240e03f60cbeb2527985, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [Errno 61] Connection refused')>]>
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 206, in _get_collection
+    db = cls._get_db()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 184, in _get_db
+    return get_db(cls._meta.get("db_alias", DEFAULT_CONNECTION_NAME))
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/connection.py", line 363, in get_db
+    db.authenticate(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/database.py", line 1492, in authenticate
+    self.client._cache_credentials(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 775, in _cache_credentials
+    server = self._get_topology().select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 61] Connection refused, Timeout: 30s, Topology Description: <TopologyDescription id: 602f240e03f60cbeb2527985, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [Errno 61] Connection refused')>]>
+2021-02-18 23:38:08,028 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboaxdd@gamboa.com.br', 'password': '$2b$12$9JS7kDeXri9qJAN.ZAoc6O2E64suqNDXDwEatK6IPFFNAGOVINBYW', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 214, in _get_collection
+    if cls._meta.get("auto_create_index", True) and db.client.is_primary:
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1031, in is_primary
+    return self._server_property('is_writable')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 855, in _server_property
+    server = self._topology.select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 61] Connection refused, Timeout: 30s, Topology Description: <TopologyDescription id: 602f246b9047155a614e4bd5, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [Errno 61] Connection refused')>]>
+2021-02-18 23:38:08,617 ERROR <NEWS_APP_INFO> Trace: 127.0.0.1:27017: [Errno 61] Connection refused, Timeout: 30s, Topology Description: <TopologyDescription id: 602f246b9047155a614e4bd5, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [Errno 61] Connection refused')>]>
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 393, in save
+    self.ensure_indexes()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 867, in ensure_indexes
+    collection = cls._get_collection()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 214, in _get_collection
+    if cls._meta.get("auto_create_index", True) and db.client.is_primary:
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1031, in is_primary
+    return self._server_property('is_writable')
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 855, in _server_property
+    server = self._topology.select_server(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 241, in select_server
+    return random.choice(self.select_servers(selector,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 199, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/topology.py", line 215, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 61] Connection refused, Timeout: 30s, Topology Description: <TopologyDescription id: 602f246b9047155a614e4bd5, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [Errno 61] Connection refused')>]>
+2021-02-18 23:38:15,712 ERROR <NEWS_APP_INFO> ******** Erro ao criar um usuário: {'email': 'gamboaxdd@gamboa.com.br', 'password': '$2b$12$ZNbJLlILegDKBsGSFOe0iOf0gZXd/MlFAonYzUFzd4YpxKkzKSSuS', 'name': 'Gamboa'}
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboaxdd@gamboa.com.br" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'gamboaxdd@gamboa.com.br'}, 'errmsg': 'E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboaxdd@gamboa.com.br" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboaxdd@gamboa.com.br" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'gamboaxdd@gamboa.com.br'}, 'errmsg': 'E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboaxdd@gamboa.com.br" }'})
+2021-02-18 23:38:15,765 ERROR <NEWS_APP_INFO> Trace: Tried to save duplicate unique keys (E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboaxdd@gamboa.com.br" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'gamboaxdd@gamboa.com.br'}, 'errmsg': 'E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboaxdd@gamboa.com.br" }'})
+Traceback (most recent call last):
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 398, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 463, in _save_create
+    object_id = wc_collection.insert_one(doc).inserted_id
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 698, in insert_one
+    self._insert(document,
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 613, in _insert
+    return self._insert_one(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 602, in _insert_one
+    self.__database.client._retryable_write(
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/collection.py", line 600, in _insert_command
+    _check_write_command_response(result)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 226, in _check_write_command_response
+    _raise_last_write_error(write_errors)
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/pymongo/helpers.py", line 207, in _raise_last_write_error
+    raise DuplicateKeyError(error.get("errmsg"), 11000, error)
+pymongo.errors.DuplicateKeyError: E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboaxdd@gamboa.com.br" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'gamboaxdd@gamboa.com.br'}, 'errmsg': 'E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboaxdd@gamboa.com.br" }'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/doug/Devel/docker-crud-news/api-python/dao/user_dao.py", line 29, in create_user
+    user_resp = UserModel(**req).save()
+  File "/Users/doug/Devel/noticias-ed-globo/noticias-crud/backend/venv/lib/python3.8/site-packages/mongoengine/document.py", line 421, in save
+    raise NotUniqueError(message % err)
+mongoengine.errors.NotUniqueError: Tried to save duplicate unique keys (E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboaxdd@gamboa.com.br" }, full error: {'index': 0, 'code': 11000, 'keyPattern': {'email': 1}, 'keyValue': {'email': 'gamboaxdd@gamboa.com.br'}, 'errmsg': 'E11000 duplicate key error collection: crudnews.user_model index: email_1 dup key: { email: "gamboaxdd@gamboa.com.br" }'})
